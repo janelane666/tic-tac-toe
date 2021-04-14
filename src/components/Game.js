@@ -12,8 +12,8 @@ export default class Game extends Component {
       ],
       playerX: true,
       moveCount: 1,
-      message: ["you've won", "It's a tie"],
-      isLoading: true
+      message: [" ", "you've won", "It's a tie"],
+      isGameOver: false
     }
   }
 
@@ -22,33 +22,9 @@ export default class Game extends Component {
     this.setState({
       board: boardData.board,
       playerX: boardData.playerX,
-      moveCount: boardData.moveCount
+      moveCount: boardData.moveCount,
+      isGameOver: boardData.isGameOver
     })
-  }
-
-  winning = () => {
-    let b = this.state.board
-
-    if (
-      (b[0][0] === b[0][1] && b[0][1] === b[0][2] && b[0][2] !== " ") ||
-      (b[1][0] === b[1][1] && b[1][1] === b[1][2] && b[1][2] !== " ") ||
-      (b[2][0] === b[2][1] && b[2][1] === b[2][2] && b[2][2] !== " ") ||
-      (b[0][0] === b[1][0] && b[1][0] === b[2][0] && b[2][0] !== " ") ||
-      (b[0][1] === b[1][1] && b[1][1] === b[2][1] && b[2][1] !== " ") ||
-      (b[0][2] === b[1][2] && b[1][2] === b[2][2] && b[2][2] !== " ") ||
-      (b[0][0] === b[1][1] && b[1][1] === b[2][2] && b[2][2] !== " ") ||
-      (b[2][0] === b[1][1] && b[1][1] === b[0][2] && b[0][2] !== " ")
-    ) {
-      return (
-        <p>
-          {this.state.playerX ? "o" : "x"}, {this.state.message[0]}
-        </p>
-      )
-    } else if (this.state.moveCount > 9) {
-      return (
-        <p>{this.state.message[1]}</p>
-      )
-    }
   }
 
   newGame = () => {
@@ -57,7 +33,10 @@ export default class Game extends Component {
         [" " , " ", " "],
         [" " , " ", " "],
         [" " , " ", " "]
-      ]
+      ],
+      message: this.state.message[0],
+      moveCount: 1,
+      isGameOver: !this.state.isGameOver
     })
   }
 
@@ -69,10 +48,11 @@ export default class Game extends Component {
           playerX={this.state.playerX}
           moveCount={this.state.moveCount}
           sendData={this.sendData}
+          isGameOver={this.state.isGameOver}
         />
-        <div>{this.winning()}</div>
         <p>{this.state.playerX ? "x" : "o"}, it's your turn</p>
-        <button onClick={this.newGame}>New Game</button>
+        <button className="new-game" onClick={this.newGame}>New Game</button>
+        <p>{this.state.isGameOver ? "Game Over" : " "}</p>
       </>
     )
   }
