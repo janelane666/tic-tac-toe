@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+.tasks-list {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Courier New';
+}
+
+.add-task {
+    font-family: 'Courier New';
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: azure;
+    font-family: Monaco;
+    font-size: 12px;
+}
+
+.month {
+    font-family: Monaco;
+    margin-left: 13px;
+    margin-bottom: 20px;
+    color: lightskyblue;
+}
+
+.date-calendar {
+    display: flex;
+    flex-direction: row;
+}
+
+.col-sm {
+    margin-left: 20px;
+}
+
+.day-date {
+    margin-left: 20px;
+    margin-right: 8px;
+}

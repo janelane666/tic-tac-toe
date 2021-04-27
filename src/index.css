@@ -24,8 +24,8 @@ body {
 }
 
 .new-game {
-  width: 100px;
-  height: 50px;
+  width: 90px;
+  height: 35px;
   background-color: lightskyblue;
   color: lightyellow;
   border: none;
@@ -37,9 +37,27 @@ button:hover {
 }
 
 .navbar {
-  width: 100vh;
-  height: 10vh;
+  height: 60px;
   background-color: lightskyblue;
+  margin-bottom: 25px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.nb-links {
+  margin-left: 25px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightyellow;
 }
 
 .form {
@@ -63,9 +81,52 @@ input, select {
   padding: 5px;
   border-radius: 4px;
   background-color: lightyellow;
+  margin-right: 40px;
+}
+
+select {
+  margin-bottom: 20px;
 }
 
 label {
   margin-top: 15px;
-  margin-bottom: 12x;
+  margin-bottom: 12px;
+}
+
+.tictoctoe {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-ttt {
+  display: flex;
+}
+
+.board-game {
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome {
+  color: lightpink;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.homepage {
+  width: 100%;
+  height: 100%;
+  background-color: lightyellow;
+  color: black;
+  font-family: Times;
+  font-weight: bold;
+  font-size: xx-large;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-homepage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }

@@ -8,6 +8,8 @@ export default class Form extends Component {
       firstName: " ",
       team: " "
     }
+
+    this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(event) {
@@ -18,7 +20,7 @@ export default class Form extends Component {
   }
 
   handleSubmit(event) {
-    alert("Welcome to the game")
+    alert('Welcome to the game')
     event.preventDefault()
   }
 
@@ -48,9 +50,9 @@ export default class Form extends Component {
               <option value="x">x</option>
               <option value="o">o</option>
             </select>
+            <button className="new-game" type="submit">Submit</button>
           </div>
         </form>
-
       </>
     )
   }
