@@ -1,5 +1,8 @@
 import './App.css';
 import Game from "./components/Game"
+import store from './components/counter/store'
+import { Increment, Decrement } from "./components/counter/counterActions";
+import { useSelector, useDispatch } from 'react-redux'
 
 function App() {
   return (
