@@ -35,3 +35,37 @@ body {
 button:hover {
   background-color: deepskyblue;
 }
+
+.navbar {
+  width: 100vh;
+  height: 10vh;
+  background-color: lightskyblue;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputs, .labels {
+  display: flex;
+  flex-direction: column;
+}
+
+input, label, select {
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+input, select {
+  border-style: none;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: lightyellow;
+}
+
+label {
+  margin-top: 15px;
+  margin-bottom: 12x;
+}
